@@ -29,6 +29,7 @@
         "../src/components/ebay-radio",
         "../src/components/ebay-section-title",
         "../src/components/ebay-select",
+        "../src/components/ebay-success-message",
         "../src/components/ebay-switch",
         "../src/components/ebay-tab",
         "../src/components/ebay-textbox",
