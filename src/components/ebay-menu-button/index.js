@@ -98,7 +98,7 @@ function getInitialState(input) {
         checked: checkedItems,
         customLabel: input.label,
         disabled: input.disabled || false,
-        focusFirst: input.focusFirst || false
+        scrollManagement: input.scrollManagement || 'checked'
     };
 }
 
@@ -149,7 +149,7 @@ function getTemplateData(state) {
         items: state.items,
         customLabel: state.customLabel,
         disabled: state.disabled,
-        focusFirst: state.focusFirst
+        scrollManagement: state.scrollManagement
     };
 }
 
@@ -301,7 +301,7 @@ function handleButtonEscape() {
 }
 
 function handleExpand() {
-    if (!this.state.focusFirst) {
+    if (this.state.scrollManagement === 'checked') {
         elementScroll.scroll(this.el.querySelector(checkedItemSelector));
     }
     this.setState('expanded', true);
