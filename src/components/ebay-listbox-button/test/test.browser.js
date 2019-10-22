@@ -32,6 +32,10 @@ describe('given the listbox with 3 items', () => {
             .with.property('value', input.options[0].value);
     });
 
+    it('then it should have button with name attribute', () => {
+        expect(component.getByRole('button')).has.attr('name', 'listbox-button-name');
+    });
+
     describe('when the down arrow key is pressed', () => {
         beforeEach(async() => {
             await pressKey(component.getByRole('button'), {
